@@ -1,0 +1,123 @@
+
+:root {
+    --bgcolor-normal: #2a505c;
+    --bgcolor-correct: rgb(0, 104, 0);
+    --bgcolor-wrong: rgb(138, 0, 0);
+}
+
+body{
+    
+    --bgcolor: var(--bgcolor-normal);
+    font-family: 'Ubuntu', serif;
+    font-size: 1.75vw;
+    background-color: var(--bgcolor-normal);
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+body.correct{
+    background-color: var(--bgcolor-correct);
+}
+
+body.wrong{
+    background-color: var(--bgcolor-wrong);
+}
+
+
+
+.quizContainer{
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    display: flex;
+    border: solid 1px black;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 2px black;
+    display: flex;
+    height: 75vh;
+    width: 40vw;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+
+}
+
+.question{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.answerGrid{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 20px;
+    grid-row-gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button{
+
+    height: 5vw;
+    width: 10vw;
+    padding: 5px;
+    font-family: 'Ubuntu', serif;
+    font-size: 1.5vw;
+    background-color: #2290b1;
+    color: white;
+    border: solid 1px #326777; 
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: #2ec6f5;
+}
+
+button.correct{
+    background-color: var(--bgcolor-correct);
+    color: black;
+    border: solid 1px black;
+
+}
+
+button.wrong{
+    background-color: var(--bgcolor-wrong);
+    border: solid 1px black;
+}
+
+
+.startbBn .nextBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.hide{
+ display: none;
+}
+
+title{
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.25vw;
+}
+
+
