@@ -1,0 +1,17 @@
+Borders:
+	-Top: 200px high
+	-Both sides 300px wide
+Images:
+	-Logo: anything really that fits nicely
+	-Both Side logos 300x300
+Question and Answers:
+	-Pick reasonable size that accounts for question 	 size
+	-Answer boxes: 550x100px 
+
+Colors: 
+	-Top bar black
+	-Side bars #C4C4C4
+	-Answer bars #C4C4C4
+Font:
+	- <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	- font-family: 'Roboto', sans-serif;

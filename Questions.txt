@@ -1,0 +1,42 @@
+
+        question: 'Who created the Star Wars film series?',
+        answers:[
+            {text: 'George Lucas', correct: true },
+            {text: 'Steven Soderbergh', correct: false},
+            {text: 'Steven Spielberg', correct: false},
+            {text: 'Stanley Kubrick', correct: false},
+
+        ]
+    },
+    {
+        question: 'What sort of species is Chewbacca?',
+        answers:[
+            {text: 'Ewok', correct: false},
+            {text: 'Wookie', correct: true },
+            {text: 'Gungan', correct: false},
+            {text: 'Rodian', correct: false},
+
+        ]
+    },
+    {
+        question: 'Which small astromech droid has appeared in all Star Wars films?',
+        answers:[
+            {text: 'GORT', correct: false},
+            {text: 'VN-GO', correct: false},
+            {text: 'T-600', correct: false},
+            {text: 'RD-D2', correct: true},
+
+        ]
+    },
+    {
+        question: "Han Solo responded to Princess Leia's 'I love You' before he was frozen in carbonite with:",
+        answers:[
+            {text: 'I love you too', correct: false},
+            {text: 'Do you?', correct: false},
+            {text: 'I will miss you', correct: false},
+            {text: 'I know', correct: true},
+
+        ]
+    }
+    
+]

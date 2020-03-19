@@ -4,30 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Quiz</title>
 </head>
 <body>
-    <div class='quizContainer'>
-        <div id='title' class='title' ><h1>The Star Wars Quiz for the Non-Jedi</h1></div>
-        <div id='quiz-contianer' class='hide'>
-         
-        <div id='question' class='question'>Question</div>
-        <div id='answerGrid' class='answerGrid'>
-            <button class='btn'>Answer One</button>
-            <button class='btn'>Answer Two</button>
-            <button class='btn'>Answer Three</button>
-            <button class='btn'>Answer Four</button>
-        </div>
-        </div>
-        <div class='controls'>
-            <button id='start-Btn' class='startBtn btn'>Start</button>
-            <button id='next-Btn' class='nextBtn btn hide'>Next</button>
-            <h1 id='correctResult' class='correctResult hide' >Correct!</h1>
-            <h1 id='incorrectResult' class='incorrectResult hide'>Incorrect!</h1>
-        </div>
-    
-    </div>
+        <header>
+            <img class="logo" src="starwars-logo.png" alt="Star Wars Logo">
+        </header>
+        
+        <section>
+            <div class="right-sidebar">
+                <img class="rebel-emblem" src="rebel-emblem.svg" alt="rebel emblem">
+            </div>
+        </section>
+
+        <section>
+            <div class="left-sidebar">
+                <img class="empire-emblem" src="empire-emblem.svg" alt="empire emblem">
+            </div>
+        </section>
+
+        <section>
+            <div class='start-game'>
+                <h1>A Star Wars Quiz</h1>
+                <button class="btn">Start</button>
+            </div>
+        </section>
+
+
+
+
+
+        <section>
+            <div class="questions-and-answers hide">
+                <h2 class="question">Star Wars Questions Blah Blah</h2>
+                <div class="answer-boxes clearfix">
+                    <div class="answer-option">
+                        <p><span>&#10097</span>Answer</p>
+                    </div>
+                    <div class="answer-option">
+                        <p><span>&#10097</span>Answer</p>
+                    </div>
+                    <div class="answer-option">
+                        <p><span>&#10097</span>Answer</p>
+                    </div>
+                    <div class="answer-option">
+                        <p><span>&#10097</span>Answer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 </body>
 </html>
