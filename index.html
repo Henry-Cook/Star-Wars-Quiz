@@ -31,21 +31,27 @@
                 <button id="startBtn" class="btn">Start</button>
             </div>
         </section>
+        <section>
+            <div id="end-game" class='start-game hide'>
+                <h1>Nice job finishing the quiz!!</h1>
+                <p id='endText'></p>
+            </div>
+        </section>
 
         <section>
             <div id="questions-and-answers" class="questions-and-answers hide">
                 <h2 id='questionOne' class="question">Star Wars Questions Blah Blah</h2>
                 <div class="answer-boxes clearfix">
-                    <div id="opt" class="answer-option">
+                    <div onclick="checkAnswer(1)" id="opt" class="answer-option">
                         <p><span>&#10097</span>Answer</p>
                     </div>
-                    <div id='opt' class="answer-option">
+                    <div onclick="checkAnswer(2)" id='opt' class="answer-option">
                         <p><span>&#10097</span>Answer</p>
                     </div>
-                    <div id="opt" class="answer-option">
+                    <div onclick="checkAnswer(3)" id="opt" class="answer-option">
                         <p><span>&#10097</span>Answer</p>
                     </div>
-                    <div id='opt' class="answer-option">
+                    <div onclick="checkAnswer(4)" id='opt' class="answer-option">
                         <p><span>&#10097</span>Answer</p>
                     </div>
                 </div>
