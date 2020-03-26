@@ -1,95 +1,36 @@
+//Add event listener to the start button
+let startGameBtn = document.getElementById('startBtn');
+startGameBtn.addEventListener('click', startGame);
 
-const startbutton = document.getElementById('start-Btn');
-const nextButton = document.getElementById('next-Btn');
-const title = document.getElementById('title');
-const questionContainer = document.getElementById('quiz-contianer');
-const questionElement = document.getElementById('question');
-let shuffledQuestions, currentQuestionsIndex;
-const answerButtonElement =  document.getElementById('answerGrid');
-const correctResult = document.getElementById('correctResult');
-const incorrectResult = document.getElementById('incorrectResult');
 
-startbutton.addEventListener('click', startGame);
-nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    selectNextQuestion()
-})
-
-function startGame() {
-    startbutton.classList.add('hide');
-    title.classList.add('hide');
-    shuffledQuestions = questions.sort(() => Math.random() - .5);
-    currentQuestionIndex = 0;
-    questionContainer.classList.remove('hide');
-    selectNextQuestion();
+//Function to change start menu to the first question
+function startGame(){
+ let startMenu = document.getElementById('start-game');
+ let questionsBox = document.getElementById('questions-and-answers');
+ startMenu.classList.add('hide');
+ questionsBox.classList.remove('hide');
+ showQuestion();
 }
 
-function selectNextQuestion(){
-    resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex]);
+function showQuestion(){
+ let firstQuestion = document.getElementById('questionOne').innerHTML = qAndA.questionOne; 
+ let fullAnswers = document.querySelectorAll('#opt');
+    for(let n = 0; n < fullAnswers.length; n++){
+        fullAnswers[n].innerHTML = '<p><span>&#10097</span>' + qAndA.answerOne[n] + '</p>';
+}
+};
+
+function checkAnswer(){
+    console.log('Hi');
+};
+
+
+
+const qAndA = {
+    questionOne: "Who directed the original star wars movies?",
+    answerOne: ['George Lucas','Steven Soderbergh', 'Steven Spielberg', 'Stanley Kubrick', ],
 
 }
 
-function showQuestion(question){
-    questionElement.innerText = question.question;
-    question.answers.forEach(answer => {
-        const button = document.createElement('button')
-        button.innerText = answer.text;
-        button.classList.add('btn');
-        if (answer.correct) {
-            button.dataset.correct = answer.correct
-        }
-        button.addEventListener('click', selectAnswer)
-        answerButtonElement.appendChild(button)
-    })
-}   
+console.log(qAndA.answerOne[0]);
 
-function resetState(){
-    clearStatusClass(document.body)
-    nextButton.classList.add('hide')
-    correctResult.classList.add('hide')
-    incorrectResult.classList.add('hide')
-    while (answerButtonElement.firstChild){
-        answerButtonElement.removeChild
-        (answerButtonElement.firstChild)
-    }
-}
-
-
-
-function selectAnswer (e){
-    const selectedButton = e.target;
-    const correct = selectedButton.dataset.correct;
-    setStatusClass(document.body, correct)
-    Array.from(answerButtonElement.children).forEach(button =>{
-        setStatusClass(button, button.dataset.correct)
-    })
-    if (shuffledQuestions.length > currentQuestionIndex + 1){
-        nextButton.classList.remove('hide')
-    }else{
-        startbutton.innerText = 'Restart';
-        startbutton.classList.remove('hide')
-    }
-
-    nextButton.classList.remove('hide')
-}
-
-
-function setStatusClass(element, correct){
-    clearStatusClass(element)
-    if (correct){
-        element.classList.add('correct')   
-    } else{
-        element.classList.add('wrong') 
-        
-    }
-}
-
-function clearStatusClass(element){
-    element.classList.remove('correct')
-    element.classList.remove('wrong')
-}
-
-
-const questions = [
-    
